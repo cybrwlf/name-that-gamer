@@ -91,7 +91,7 @@
   </p>
   <p class="lede">
     Recognise someone? <strong>Hit the button on their card.</strong> You will need a GitHub
-    account to answer. Would rather not do this in public? <a href="mailto:the_cyber_wolf@hotmail.com?subject=Name%20That%20Gamer">Email CybrWlf</a> instead, subject line <strong>Name That Gamer</strong>, and nothing goes on the site.
+    account to answer. Would rather not do this in public? <span class="mail" data-m="dGhlX2N5YmVyX3dvbGZAaG90bWFpbC5jb20=" data-s="Name%20That%20Gamer"><noscript>email CybrWlf (the address needs JavaScript)</noscript></span> instead, subject line <strong>Name That Gamer</strong>, and nothing goes on the site.
   </p>
   <details class="how">
     <summary>How this works, and what is public</summary>
@@ -375,15 +375,6 @@
     <a class="submit" href="https://github.com/cybrwlf/name-that-gamer/issues/new?template=name-that-gamer.yml&amp;title=Gamer%20%23063%20%28ref%208b8c%29&amp;labels=name-that-gamer" target="_blank" rel="noopener">Name this gamer</a>
   </div>
 </div>
-<div class="card multi" id="gamer-065">
-  <div class="shots"><img src="faces/13ac84854dc054b0a302cebf78d54c783_0.jpg" alt="Gamer #065" loading="lazy"><img src="faces/4932f39dba247f8e3edee96d5bf50dbd3_0.jpg" alt="Gamer #065" loading="lazy"><img src="faces/8d299847a0142e1905c6e14aa39bcd0d3_1.jpg" alt="Gamer #065" loading="lazy"></div>
-  <div class="body">
-    <div class="handle">Gamer #065<span class="badge">2 LANs</span></div>
-    <div class="seen">Seen at the following events:</div>
-    <ul class="evs"><li>2002-09-13 [XP] Tech21 NJ</li><li>2004-02-27 [GXL] 256 Man Lan</li></ul>
-    <a class="submit" href="https://github.com/cybrwlf/name-that-gamer/issues/new?template=name-that-gamer.yml&amp;title=Gamer%20%23065%20%28ref%200adc%29&amp;labels=name-that-gamer" target="_blank" rel="noopener">Name this gamer</a>
-  </div>
-</div>
 <div class="card multi" id="gamer-073">
   <div class="shots"><img src="faces/af0498a883f9c4620ac441f593fe38d73_1.jpg" alt="Gamer #073" loading="lazy"><img src="faces/25785535f58c4a9baa91add0cc62fa823_0.jpg" alt="Gamer #073" loading="lazy"><img src="faces/4b795ca2861736a157dfa4dff56c7f593_1.jpg" alt="Gamer #073" loading="lazy"></div>
   <div class="body">
@@ -625,6 +616,15 @@
     <div class="seen">Seen at the following events:</div>
     <ul class="evs"><li>2002-04-27 [GoDS] Tech21 NJ</li><li>2003-02-07 [LANS] One NJ</li></ul>
     <a class="submit" href="https://github.com/cybrwlf/name-that-gamer/issues/new?template=name-that-gamer.yml&amp;title=Gamer%20%23162%20%28ref%20f40a%29&amp;labels=name-that-gamer" target="_blank" rel="noopener">Name this gamer</a>
+  </div>
+</div>
+<div class="card multi" id="gamer-065">
+  <div class="shots"><img src="faces/8d299847a0142e1905c6e14aa39bcd0d3_1.jpg" alt="Gamer #065" loading="lazy"><img src="faces/08e5febf681d4d522bb3a0bb0d3dbdd83_0.jpg" alt="Gamer #065" loading="lazy"><img src="faces/2a89f72728461fc64eb1ec07365c81353_1.jpg" alt="Gamer #065" loading="lazy"></div>
+  <div class="body">
+    <div class="handle">Gamer #065<span class="badge">2 LANs</span></div>
+    <div class="seen">Seen at the following events:</div>
+    <ul class="evs"><li>2002-09-13 [XP] Tech21 NJ</li><li>2004-02-27 [GXL] 256 Man Lan</li></ul>
+    <a class="submit" href="https://github.com/cybrwlf/name-that-gamer/issues/new?template=name-that-gamer.yml&amp;title=Gamer%20%23065%20%28ref%200adc%29&amp;labels=name-that-gamer" target="_blank" rel="noopener">Name this gamer</a>
   </div>
 </div>
 </div>
@@ -1180,6 +1180,22 @@
   </div>
 </div>
 </div>
+
+<script>
+(function () {
+  var parts = document.querySelectorAll("span.mail");
+  for (var i = 0; i < parts.length; i++) {
+    var el = parts[i], addr;
+    try { addr = atob(el.getAttribute("data-m")); } catch (e) { continue; }
+    var a = document.createElement("a");
+    a.href = "mailto:" + addr + "?subject=" + el.getAttribute("data-s");
+    a.textContent = "email CybrWlf";
+    el.textContent = "";
+    el.appendChild(a);
+  }
+})();
+</script>
+
 
 <footer>
   Part of the GoDS Community Archive. Faces were detected with InsightFace and grouped
