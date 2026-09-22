@@ -32,9 +32,13 @@ The three shots on a card are the three largest crops of that face in the archiv
 full-size originals. If they look rough, that is a sub-megapixel camera in a dark room, not the
 crop.
 
-The event list under each face is every LAN that person shows up at, taken from the folder the
+The event list under each face is the LANs that person shows up at, taken from the folder the
 photo sits in. It is a floor, not a roster: it proves they were photographed there, not the full
 list of parties they went to.
+
+**Private parties are left off.** A good number of these LANs were invite-only and held in
+somebody's house, and those are not named here. A card whose photos come only from private
+parties is not on the site at all.
 
 ## Taking a face down
 
