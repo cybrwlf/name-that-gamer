@@ -1,0 +1,69 @@
+name: Name that gamer
+description: Put a name to one of the unidentified faces
+title: "Gamer #"
+labels: ["name-that-gamer"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping. Handle is all we really need. Everything else is optional.
+
+        If you would rather not have your own face on the site, say so here and it comes down.
+
+  - type: input
+    id: gamer
+    attributes:
+      label: Gamer number
+      description: The number on the card, like 020. It should already be filled in.
+      placeholder: "020"
+    validations:
+      required: true
+
+  - type: input
+    id: handle
+    attributes:
+      label: Handle
+      description: What they went by online. Include the clan tag if they had one.
+      placeholder: "[GoDS]TheCyberWolf"
+    validations:
+      required: true
+
+  - type: input
+    id: realname
+    attributes:
+      label: Real name
+      description: Optional. Leave blank if you would rather not, or if you do not know it.
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: How sure are you?
+      description: A guess flagged as a guess is useful. A guess passed off as fact is not.
+      options:
+        - Certain, I know them
+        - Pretty sure
+        - A guess
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: problems
+    attributes:
+      label: Something wrong with the card?
+      description: The faces were grouped automatically, so the grouping is often wrong.
+      options:
+        - label: This card has more than one person on it
+        - label: This person also shows up on another card
+        - label: One or more of these crops is not a face at all
+
+  - type: input
+    id: events
+    attributes:
+      label: Events on the card
+      description: Filled in automatically. Leave it alone.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Which other card they are on, which LANs you remember them at, anything.
