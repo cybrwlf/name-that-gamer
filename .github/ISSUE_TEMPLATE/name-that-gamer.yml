@@ -6,45 +6,84 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping. Handle is all we really need. Everything else is optional.
+        **Please leave the title alone.** The number in it is how we know which face you mean.
 
-        If you would rather not have your own face on the site, say so here and it comes down.
+        **Everything you write here is public.** Anyone can read it, with or without a GitHub
+        account, and search engines index it. So there is no box for an email address, a real
+        name or a Steam ID, and please do not put one in the notes either. If you would rather
+        not do this in the open, say so in the notes and we will take it from there.
 
-  - type: input
-    id: gamer
+        The gamer handle is the only thing we really need. Everything else is optional.
+
+  - type: dropdown
+    id: relationship
     attributes:
-      label: Gamer number
-      description: The number on the card, like 020. It should already be filled in.
-      placeholder: "020"
+      label: How do you know this person?
+      options:
+        - That is me
+        - I know them
+        - I think I know them, not certain
     validations:
       required: true
 
   - type: input
     id: handle
     attributes:
-      label: Handle
-      description: What they went by online. Include the clan tag if they had one.
+      label: Gamer Handle
+      description: What they went by online. Include the clan tag if they used one.
       placeholder: "[GoDS]TheCyberWolf"
     validations:
       required: true
 
-  - type: input
-    id: realname
-    attributes:
-      label: Real name
-      description: Optional. Leave blank if you would rather not, or if you do not know it.
-
   - type: dropdown
-    id: confidence
+    id: clan
     attributes:
-      label: How sure are you?
-      description: A guess flagged as a guess is useful. A guess passed off as fact is not.
+      label: Clan
+      description: >
+        Optional. Plenty of people ran solo, and if you are naming someone else you may simply not
+        know. Pick "Other" and use the box below for anything missing from this list.
       options:
-        - Certain, I know them
-        - Pretty sure
-        - A guess
-    validations:
-      required: true
+        - ""
+        - GoDS
+        - s2i
+        - XP
+        - LAN Synergy (LANS)
+        - theGXL
+        - Weekend Wars (WW)
+        - ill Gaming
+        - HavokLAN
+        - Wicked Lans
+        - NJ Gamers
+        - New Jersey LAN
+        - NJ LAN Party
+        - CFM LAN
+        - Maryland LAN Gamers
+        - War Room Gaming
+        - FITES
+        - SJLP
+        - TGS
+        - RR
+        - PW
+        - DUPC
+        - Solo, no clan
+        - Do not know
+        - Other, typed below
+
+  - type: input
+    id: clan_other
+    attributes:
+      label: Clan, if it is not on that list
+      description: Optional. Only fill this in if you picked "Other" above.
+
+  - type: checkboxes
+    id: contact
+    attributes:
+      label: Getting back to you
+      description: >
+        Nothing here shares an address. The first one just means we can reply on this issue.
+      options:
+        - label: Happy for CybrWlf to @ me here if he needs permission to use this name
+        - label: I can pass this along to them and point them at the site
 
   - type: checkboxes
     id: problems
@@ -56,14 +95,10 @@ body:
         - label: This person also shows up on another card
         - label: One or more of these crops is not a face at all
 
-  - type: input
-    id: events
-    attributes:
-      label: Events on the card
-      description: Filled in automatically. Leave it alone.
-
   - type: textarea
     id: notes
     attributes:
       label: Anything else
-      description: Which other card they are on, which LANs you remember them at, anything.
+      description: >
+        Which other card they are on, which LANs you remember them at, anything. No contact
+        details please, this box is public too.
